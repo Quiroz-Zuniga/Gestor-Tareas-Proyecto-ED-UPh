@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    --amarillo01: #fdf88c;
+    --amarillo02: #fff062;
+    --amarillo03: #ffea6e;
+    --amarillo04: #f9f09d;
+    --amarillo05: #fff969;
+    --fondo: #aaaAAA;
+    background-color: var(--amarillo04);
+}
+
