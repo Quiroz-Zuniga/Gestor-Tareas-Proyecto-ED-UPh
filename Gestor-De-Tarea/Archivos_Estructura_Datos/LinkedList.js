@@ -56,17 +56,20 @@ class listaEnlazada {
     };
 };
 
+
+
+
 // Crear instancia de lista enlazada
 
-const listaTareas = new listaEnlazada();
+// const listaTareas = new listaEnlazada();
 
-listaTareas.agregar('Tarea calculo II', 'Realizar una guía par el día martes', 1);
-listaTareas.agregar('Tarea Final Estructura de datos', 'Crear un programa que implemente las estructuras de datos visto en clases', 2);
+// listaTareas.agregar('Tarea calculo II', 'Realizar una guía par el día martes', 1);
+// listaTareas.agregar('Tarea Final Estructura de datos', 'Crear un programa que implemente las estructuras de datos visto en clases', 2);
 
-listaTareas.agregar('Tarea Dibujo Técnico', 'Realizar proyecto final, dibujar la universidad', 3);
+// listaTareas.agregar('Tarea Dibujo Técnico', 'Realizar proyecto final, dibujar la universidad', 3);
 
+// // listaTareas.mostrar();
+// console.log("-----------------------------");
+// listaTareas.eliminar('Tarea Final Estructura de datos');
+// console.log("-----------------------------");
 // listaTareas.mostrar();
-console.log("-----------------------------");
-listaTareas.eliminar('Tarea Final Estructura de datos');
-console.log("-----------------------------");
-listaTareas.mostrar();
