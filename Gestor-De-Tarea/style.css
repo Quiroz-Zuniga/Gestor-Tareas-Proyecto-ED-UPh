@@ -1,12 +1,36 @@
 body {
     margin: 0;
     padding: 0;
-    --amarillo01: #fdf88c;
-    --amarillo02: #fff062;
-    --amarillo03: #ffea6e;
-    --amarillo04: #f9f09d;
-    --amarillo05: #fff969;
-    --fondo: #aaaAAA;
-    background-color: var(--amarillo04);
+  
+    background-color: var(--fondo);
+    font-family: Arial, sans-serif;
 }
 
+h1 {
+    text-align: center;
+    color: var(--amarillo01);
+}
+
+
+form {
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #333;
+
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    background-color: var(--fondo);
+    color: var(--amarillo04);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--amarillo03);
+    color: var(--fondo);
+}

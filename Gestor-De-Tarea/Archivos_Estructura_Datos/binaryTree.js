@@ -50,11 +50,11 @@ insertar(tarea) {
 
 // creacion de estancias para el arbolbinario
 
-const arbolTareas = new ArbolBinario();
+// const arbolTareas = new ArbolBinario();
 
-function mostrarTarea(tarea) {
-    console.log(`Título: ${tarea.titulo}, Descripción: ${tarea.descripcion}, Importancia: ${tarea.importancia}`);
-};
+// function mostrarTarea(tarea) {
+//     console.log(`Título: ${tarea.titulo}, Descripción: ${tarea.descripcion}, Importancia: ${tarea.importancia}`);
+// };
 
 // // insertar tareas
 

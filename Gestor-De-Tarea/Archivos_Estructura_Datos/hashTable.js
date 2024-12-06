@@ -48,26 +48,26 @@ class TablaHash {
 
 // Creación instancia tablas hash
 
-const tablaHashTareas = new TablaHash();
-// insertar tablas
-tablaHashTareas.set('Tarea 1', { descripcion: 'Descripción 1', importancia: 2});
-tablaHashTareas.set('Tarea 2', { descripcion: 'Descripción 2', importancia: 1});
-tablaHashTareas.set('Tarea 3', { descripcion: 'Descripción 3', importancia: 3});
+// const tablaHashTareas = new TablaHash();
+// // insertar tablas
+// tablaHashTareas.set('Tarea 1', { descripcion: 'Descripción 1', importancia: 2});
+// tablaHashTareas.set('Tarea 2', { descripcion: 'Descripción 2', importancia: 1});
+// tablaHashTareas.set('Tarea 3', { descripcion: 'Descripción 3', importancia: 3});
 
-// buscar y mostrar tareas
+// // buscar y mostrar tareas
 
-console.log("------Buscar--Tarea--2-------");
+// console.log("------Buscar--Tarea--2-------");
 
-const tarea2 = tablaHashTareas.get('Tarea 2');
-console.log(tarea2);
+// const tarea2 = tablaHashTareas.get('Tarea 2');
+// console.log(tarea2);
 
-// eliminar tarea 
+// // eliminar tarea 
 
-console.log("------Eliminar--Tarea--1------");
-tablaHashTareas.eliminar('Tarea 1');
-const tarea1 = tablaHashTareas.get('Tarea 1');
-console.log(tarea1);
+// console.log("------Eliminar--Tarea--1------");
+// tablaHashTareas.eliminar('Tarea 1');
+// const tarea1 = tablaHashTareas.get('Tarea 1');
+// console.log(tarea1);
 
-// tablaHashTareas.mostrar();
+// // tablaHashTareas.mostrar();
 
 

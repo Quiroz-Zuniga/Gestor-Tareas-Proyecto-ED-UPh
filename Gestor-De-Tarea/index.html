@@ -6,8 +6,22 @@
     <link rel="stylesheet" href="style.css">
     <title>Gestor de Tareas</title>
 </head>
-<body>  
-    
+<body> 
+    <h1>Gestor de Tareas</h1>
+    <div class="task-container">
+        <form  class="task-form">
+            <input type="text" id="task-title" placeholder="Titulos de la tarea " required>
+            <input type="text" id="task-desc" placeholder="Descripción de la tarea " required>
+            <select id="task-importance">
+                <option value="1">Baja</option>
+                <option value="2">Media</option>
+                <option value="3">Alta</option>
+            </select>
+            <button>Agregar Tarea</button>
+        </form>
+    </div>
+
+    <!-- archivos script para la funcionalidad -->
     <script src="/Gestor-De-Tarea/Archivos_Estructura_Datos/LinkedList.js" ></script>
     <script src="/Gestor-De-Tarea/Archivos_Estructura_Datos/binaryTree.js" ></script>
     <script src="/Gestor-De-Tarea/Archivos_Estructura_Datos/hashTable.js" ></script>
