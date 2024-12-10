@@ -1,10 +1,11 @@
 // implementación clase tarea y listaEnlazada
 
 class Tarea {
-    constructor(titulo, descripcion, importancia ) {
+    constructor(titulo, descripcion, importancia, fecha ) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.importancia = importancia;
+        this.fecha = fecha;
         this.siguiente = null;  // siguiente es el nodo alcual estara enlazado la cabeza
     }
 }
@@ -15,8 +16,8 @@ class listaEnlazada {
         this.cabeza = null; //el primer nodo al cual le asignaremos la cabeza 
     };
     // Crear funciones para agregar, buscar y eliminar tareas
-    agregar(titulo, descripcion, importancia) {
-        const nuevaTarea = new Tarea(titulo, descripcion, importancia);
+    agregar(titulo, descripcion, importancia, fecha) {
+        const nuevaTarea = new Tarea(titulo, descripcion, importancia, fecha);
         if (this.cabeza === null) {
             this.cabeza = nuevaTarea;
         } else {
@@ -50,7 +51,7 @@ class listaEnlazada {
     mostrar() {
         let actual = this.cabeza;
         while (actual !== null) {
-            console.log(`Titulo: ${actual.titulo}, Descripción: ${actual.descripcion}, Imporatancia: ${actual.importancia}`);
+            console.log(`Titulo: ${actual.titulo}, Descripción: ${actual.descripcion}, Imporatancia: ${actual.importancia}, Fecha: ${actual.fecha}`);
             actual = actual.siguiente;
         };
     };

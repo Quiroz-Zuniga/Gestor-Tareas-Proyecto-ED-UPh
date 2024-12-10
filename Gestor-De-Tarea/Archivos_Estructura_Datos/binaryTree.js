@@ -46,6 +46,33 @@ insertar(tarea) {
             this.inOrden(nodo.derecha, callback);
         }
     }
+// Eliminar 
+    eliminar(titulo, nodo = this.raiz) { 
+        if (nodo === null) return null;
+        if (titulo < nodo.tarea.titulo) {
+            nodo.izquierda  = this.eliminar(titulo,  nodo.izquierda);
+            return nodo;
+        } else if (titulo > nodo.tarea.titulo){ 
+            nodo.derecha = this.eliminar(titulo, nodo.derecha);
+            return nodo;
+        } else {
+            if (nodo.izquierda === null) return nodo.derecha;
+            if (nodo.derecha == null) return nodo.izquierda;
+
+            let sucesor = this.minValor(nodo.derecha);
+            nodo.tarea = sucesor.tarea;
+            nodo.derecha = this.eliminar(sucesor.tarea.titulo, nodo.derecha);
+            return nodo;
+        }
+    }
+// fuunción axiliar para encontrar al sucesor de la raiz
+    minValor(nodo) {
+        let actual = nodo;
+        while (actual.izquierda !== null) {
+            actual = actual.izquierda;
+        }
+        return actual;
+    }
 };
 
 // creacion de estancias para el arbolbinario

@@ -6,13 +6,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1 {
+h1, h2con {
     text-align: center;
     color: var(--amarillo01);
 }
 
 
-form {
+form, #task-container{
     margin: 20px auto;
     padding: 10px;
     border: 1px solid #333;
