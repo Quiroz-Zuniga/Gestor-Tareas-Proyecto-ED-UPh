@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // ajustamos para mostrar el nivel de importancia
         tareas.sort((a, b) => a.importancia - b.importancia);
 
-
     // mostrar tareas por nivel de importacia
 
         tareas.forEach(actual => {
@@ -128,14 +127,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         taskContainer.innerHTML = '';
 
         if (tarea) {
+            const importanciaTexto = convertirImportancia(tarea.importancia);
             const taskItem = document.createElement('div');
             taskItem.className = 'task-item';
             taskItem.innerHTML = `
-                <p" ><strong>Título:</strong> ${titulo}</p>
-                <p" ><strong>Descripción:</strong> ${tarea.descripcion}</p>
-                <p" ><strong>Importancia:</strong> ${tarea.importancia}</p>
-                <p" ><strong>Fecha:</strong> ${tarea.fecha}</p>
-                <button"  class="delete-task" data-title="${titulo}">Eliminar</button>
+                <p><strong>Título:</strong> ${titulo}</p>
+                <p><strong>Descripción:</strong> ${tarea.descripcion}</p>
+                <p><strong>Importancia:</strong> ${importanciaTexto}</p>
+                <p><strong>Fecha:</strong> ${tarea.fecha}</p>
+                <button class="delete-task" data-title="${titulo}">Eliminar</button>
             `;
             taskContainer.appendChild(taskItem);
 

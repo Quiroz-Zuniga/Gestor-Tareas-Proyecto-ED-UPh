@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 body {
     margin: 0;
     padding: 0;
     --bk-fondo: #ffffff;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto";
     --color-texto:#9E6D4D;
     --color-titles: #F22B4A;
     --color-fondo-imput:#E7CBBC;
@@ -15,6 +16,7 @@ main{
     background:url(/Img/nice-christmas-background-white-background-with-copy-space.jpg) no-repeat fixed;
     background-size: cover;
     padding-bottom: 20px;
+    width: 100%;
 }
 .titles{
     margin: 0 ;
@@ -103,32 +105,84 @@ button:hover{
     border-radius: 14px;
 }
 
+.task-item button:hover{
+    background-color: var(--color-titles);
+    color: var(--bk-fondo);
+}
 .taskContainer p {
     text-align: center;
 }
 
 
-
+p{
+    text-align: center;
+    color: var(--color-texto);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
 /* footer   */
 img{
     margin: 0;
 }
 #food{
-    height: 200px;
+    width: 100%;
+    min-height: 20%;
     color: var(--bk-fondo);
-    background: url(/Img/image.png) no-repeat center ;
-    background-size: cover;
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 0;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0px;
     margin: 0;
     font-weight: bold;
     font-size: 1.5rem;
 }
 a{
-    text-decoration: none;
-    color: var(--bk-fondo);
+    color: var(--color-titles);
+}
+
+/* MEdia queries */
+
+@media (max-whidth: 1200px) {
+    #task-container, #task-form, #task-list {
+        min-width: 80%;
+    }
+    .tamaño{
+        width:70%;
+    }
+    .titles{
+        font-size: 2.5em; 
+    }
+}
+
+@media (max-whidth: 768px) {
+    #task-container, #task-form, #task-list {
+        min-width: 90%;
+    }
+    .tamaño{
+        width:80%;
+    }
+    .titles{
+        font-size: 2em; 
+    }
+}
+
+@media (max-whidth: 480px) {
+    #task-container, #task-form, #task-list {
+        min-width: 100%;
+    }
+    .tamaño{
+        width:90%;
+    }
+    .titles{
+        font-size: 1.5em ;
+    }
+    .task-item{
+        flex-direction: column;
+        align-items:start;
+        
+    }
 }
