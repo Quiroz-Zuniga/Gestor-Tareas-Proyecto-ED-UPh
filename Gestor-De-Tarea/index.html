@@ -7,30 +7,37 @@
     <title>Gestor de Tareas</title>
 </head>
 <body> 
-    <h1>Gestor de Tareas</h1>
-    <div class="task-container">
-        <form  id="task-form">
-            <input type="text" id="task-title" placeholder="Titulos de la tarea " required>
-            <input type="text" id="task-desc" placeholder="Descripción de la tarea " required>
-            <select id="task-importance">
-                <option value="1">Baja</option>
-                <option value="2">Media</option>
-                <option value="3">Alta</option>
-            </select>
-            <input type="date" id="task-date" required>
-            <button>Agregar Tarea</button>
-        </form>
-    </div>
-<!-- Divisor para visualizar las tareas -->
-    <div id="task-container">
-        <h2>Tareas</h2>
-        <div>
-            <input type="text" id="search-task" placeholder="Buscar tarea por título">
-            <button id="search-button">Buscar</button>
+    <main>
+        <h1 class="titles">Gestor de Tareas</h1>
+            <form  id="task-form">
+                <input class="tamaño" type="text" id="task-title" placeholder="Titulos de la tarea " required>
+                <input class="tamaño" type="text" id="task-desc" placeholder="Descripción de la tarea " required>
+                <input class="tamaño" type="date" id="task-date" required>
+                <select class="tamaño" id="task-importance">
+                    <option value="3">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="1">Alta</option>
+                </select>
+                <button class="tamaño">Agregar Tarea</button>
+            </form>
+    <!-- Divisor para visualizar las tareas -->
+        <div id="task-container">
+            <h2 class="titles">Tareas</h2>
+            <div>
+                <input type="text" class="tamaño" id="search-task" placeholder="Buscar tarea por título">
+                <button class="tamaño" id="search-button">Buscar</button>
+            </div>
         </div>
         <div id="task-list">
-       </div>
-    </div>
+        </div>
+    </main>
+    
+    <footer id="food">
+        <div>
+            <small>Desarrollado por:</small>
+        </div>
+        <a href="">Ruben Quiroz <img src="/Img/Mi-avatar-ll-sin-fondo.png" width="100px" alt="Ruben Quiroz"></a>
+    </footer>
 
     <!-- archivos script para la funcionalidad -->
     <script src="/Gestor-De-Tarea/Archivos_Estructura_Datos/LinkedList.js" ></script>
@@ -38,4 +45,4 @@
     <script src="/Gestor-De-Tarea/Archivos_Estructura_Datos/hashTable.js" ></script>
     <script src="script.js" ></script>
 </body>
-</html>x
+</html>

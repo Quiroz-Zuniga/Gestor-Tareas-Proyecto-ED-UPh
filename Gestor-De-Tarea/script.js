@@ -27,6 +27,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         displayTasks();
     });
 
+    function convertirImportancia(importancia) {
+        switch (importancia) {
+            case 1:
+                return "Alta";
+            case 2:
+                return "Media";
+            case 3:
+                return "Baja";
+            default:
+                return "Desconocida";
+        }
+    }
+    
+
     // Función para mostrar todas las tareas en la UI
     function displayTasks() {
         const taskContainer = document.getElementById('task-list');
@@ -47,12 +61,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // mostrar tareas por nivel de importacia
 
         tareas.forEach(actual => {
+            const importaciaTexto = convertirImportancia(actual.importancia);
             const taskItem = document.createElement('div');
             taskItem.className = 'task-item';
             taskItem.innerHTML = `
                 <p><strong>Título:</strong> ${actual.titulo}</p>
                 <p><strong>Descripción:</strong> ${actual.descripcion}</p>
-                <p><strong>Importancia:</strong> ${actual.importancia}</p>
+                <p><strong>Importancia:</strong> ${importaciaTexto}</p>
                 <p><strong>Fecha:</strong> ${actual.fecha}</p>
                 <button class="delete-task" data-title="${actual.titulo}">Eliminar</button>
             `;
@@ -116,11 +131,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const taskItem = document.createElement('div');
             taskItem.className = 'task-item';
             taskItem.innerHTML = `
-                <p><strong>Título:</strong> ${titulo}</p>
-                <p><strong>Descripción:</strong> ${tarea.descripcion}</p>
-                <p><strong>Importancia:</strong> ${tarea.importancia}</p>
-                <p><strong>Fecha:</strong> ${tarea.fecha}</p>
-                <button class="delete-task" data-title="${titulo}">Eliminar</button>
+                <p" ><strong>Título:</strong> ${titulo}</p>
+                <p" ><strong>Descripción:</strong> ${tarea.descripcion}</p>
+                <p" ><strong>Importancia:</strong> ${tarea.importancia}</p>
+                <p" ><strong>Fecha:</strong> ${tarea.fecha}</p>
+                <button"  class="delete-task" data-title="${titulo}">Eliminar</button>
             `;
             taskContainer.appendChild(taskItem);
 
@@ -129,7 +144,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 eliminarTarea(titulo);
             });
         } else {
-            taskContainer.innerHTML = '<p>No se encontró la tarea.</p>';
+            taskContainer.innerHTML = '<p class:"no-tarea" >No se encontró la tarea.</p>';
         }
     }
 

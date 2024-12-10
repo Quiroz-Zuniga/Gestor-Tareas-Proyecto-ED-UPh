@@ -1,36 +1,134 @@
 body {
     margin: 0;
     padding: 0;
-  
-    background-color: var(--fondo);
+    --bk-fondo: #ffffff;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    --color-texto:#9E6D4D;
+    --color-titles: #F22B4A;
+    --color-fondo-imput:#E7CBBC;
 }
 
-h1, h2con {
-    text-align: center;
-    color: var(--amarillo01);
+main{
+    margin: 0;
+    padding: 0;
+    background:url(/Img/nice-christmas-background-white-background-with-copy-space.jpg) no-repeat fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+}
+.titles{
+    margin: 0 ;
+    padding-top: 10px;
+    text-align:center;
+    color: var(--color-titles);
+    font-size: 3em;
 }
 
-
-form, #task-container{
-    margin: 20px auto;
-    padding: 10px;
-    border: 1px solid #333;
-
-    width: 300px;
-    text-align: center;
+/* contenedor */
+#task-container , #task-form{
+    min-width: 980px ;
+    justify-self: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    gap: 20px;
+    color: var(--color-texto);
 }
 
-button{
-    background-color: var(--fondo);
-    color: var(--amarillo04);
-    border: none;
-    cursor: pointer;
+#task-container div{
+    min-width: inherit;
+    display: flex;
+    flex-direction:column ;
+    justify-items:center;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-texto);
 }
+
+.tamaño {
+    width: 50%;
+    padding: 10px;
+    color: var(--color-texto);
+    background-color:transparent;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    border: none;
+    border: 1px solid var(--color-fondo-imput);
+}
+
+
+input:focus{
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+}
+
+.tamaño::placeholder {
+    color: var(--color-texto);
+}
+
 
 button:hover{
-    background-color: var(--amarillo03);
-    color: var(--fondo);
+    background-color: var(--color-titles);
+    color: var(--bk-fondo);
+}
+/* Tareas */
+#task-list {
+    min-width: 980px ;
+    justify-self: center;
+    align-items: center;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+
+    margin-bottom: 10px;
+    background:var(--color-fondo-imput);
+    border: 1px dashed var(--color-texto);
+    border-radius: 5px;
+    color: var(--color-titles);
+}
+
+.task-item button{
+    padding: 10px;
+    border:1px solid #9E6D4D;
+    background-color: transparent;
+    border-radius: 14px;
+}
+
+.taskContainer p {
+    text-align: center;
+}
+
+
+
+
+/* footer   */
+img{
+    margin: 0;
+}
+#food{
+    height: 200px;
+    color: var(--bk-fondo);
+    background: url(/Img/image.png) no-repeat center ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: var(--bk-fondo);
 }
