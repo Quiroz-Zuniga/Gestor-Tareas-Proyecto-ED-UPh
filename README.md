@@ -10,3 +10,5 @@ Además, empleará una estructura no lineal mediante árboles, utilizando la bú
 El gestor de tareas registrará cada trabajo realizado y permitirá agregar, eliminar y visualizar tareas. 
 Utilizaré JavaScript (vainilla), HTML y CSS para el desarrollo, y Git junto con GitHub para el control de versiones. 
 Visual Studio Code será el entorno de desarrollo que usaré, y GitHub Pages servirá como el servidor web para montar la aplicación.
+
+para ejecutar la web deveras 
